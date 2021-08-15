@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:rio/components/input.dart';
 import 'package:rio/constants/colors.dart';
 
-class MyHomePage extends StatefulWidget {
+class SignIn extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _SignInState createState() => _SignInState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,7 +77,9 @@ class _MyHomePageState extends State<MyHomePage> {
                           alignment: Alignment.bottomCenter,
                           padding: EdgeInsets.only(bottom: 10),
                           child: TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).pushNamed("homePage");
+                            },
                             child: Text(
                               "New Member?",
                               style: TextStyle(color: accent1, fontSize: 16),
