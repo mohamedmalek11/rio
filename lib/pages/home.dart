@@ -11,6 +11,30 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        leading: Container(),
+        title: Image.asset(
+          "assets/images/logo1.png",
+          fit: BoxFit.contain,
+          height: 70,
+        ),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        centerTitle: true,
+        toolbarHeight: 70,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: IconButton(
+                icon: Icon(
+                  Icons.settings,
+                  size: 30,
+                ),
+                onPressed: () {}),
+          )
+        ],
+      ),
       body: Stack(
         children: [
           // Background Image
@@ -33,6 +57,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 // The Page lelments
                 child: Column(
                   children: [
+                    Divider(
+                      height: 70,
+                    ),
                     Container(
                       height: 100,
                       child: Image.asset("assets/images/logo2.png"),
