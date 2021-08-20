@@ -80,7 +80,7 @@ class _SignInState extends State<SignIn> {
                           padding: EdgeInsets.only(bottom: 10),
                           child: TextButton(
                             onPressed: () {
-                              Get.to(MyHomePage());
+                              Get.to(MyHomePage(),transition: Transition.native);
                             },
                             child: Text(
                               "New Member?",

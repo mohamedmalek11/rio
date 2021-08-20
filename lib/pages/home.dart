@@ -14,6 +14,12 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
+      floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: Icon(
+            Icons.phone,
+            color: Colors.white,
+          )),
       appBar: AppBar(
         leading: Container(),
         title: Image.asset(
@@ -22,7 +28,7 @@ class _MyHomePageState extends State<MyHomePage> {
           height: 70,
         ),
         backgroundColor: Colors.transparent,
-        elevation: 0,
+        elevation: 0.0,
         centerTitle: true,
         toolbarHeight: 70,
         actions: [
@@ -64,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Stack(
                       children: [
                         Container(
-                          margin: EdgeInsets.only(top: 20),
+                          margin: EdgeInsets.only(top: 0),
                           height: 200,
                           width: 600,
                           child: Container(
@@ -84,9 +90,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(borderRadios),
-                            color: mainColor.withOpacity(0.8),
+                            color: mainColor.withOpacity(0.9),
                           ),
-                          margin: EdgeInsets.only(top: 20),
+                          margin: EdgeInsets.only(top: 0),
                           height: 200,
                           width: 600,
                           child: Container(
@@ -105,6 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                                 'Three months and one month free',
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold,
+                                                color: Color(0xffffffff),
                                                 fontSize: 30)),
                                       ],
                                     ),
@@ -119,7 +126,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                             text:
                                                 'Get a month for free when you subscribe for 3 months Subscription price 1500 pounds This offer is valid until the end of the year',
                                             style: TextStyle(
-                                                fontWeight: FontWeight.bold,
                                                 fontSize: 15,
                                                 height: 1.6)),
                                       ],
@@ -157,7 +163,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(borderRadios),
-                            color: mainColor.withOpacity(0.8),
+                            color: mainColor.withOpacity(0.9),
                           ),
                           margin: EdgeInsets.only(top: 20),
                           height: 200,
@@ -178,6 +184,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                                 'Subscribe 6 months for 2500 EGP',
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold,
+                                                color: Color(0xffffffff),
                                                 fontSize: 30)),
                                       ],
                                     ),
@@ -192,7 +199,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                             text:
                                                 'For a limited time, subscribe to the 6-month offer for 2500 instead of 3500 pounds, this throne is valid until the end of the year',
                                             style: TextStyle(
-                                                fontWeight: FontWeight.bold,
                                                 fontSize: 15,
                                                 height: 1.6)),
                                       ],
@@ -230,7 +236,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(borderRadios),
-                            color: mainColor.withOpacity(0.8),
+                            color: mainColor.withOpacity(0.9),
                           ),
                           margin: EdgeInsets.only(top: 20),
                           height: 200,
@@ -250,6 +256,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                             text: 'Eid al-Adha offer',
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold,
+                                                color: Color(0xffffffff),
                                                 fontSize: 30)),
                                       ],
                                     ),
@@ -264,7 +271,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                             text:
                                                 'A special offer for Eid Al-Adha, you can register a 3-month subscription for 1200 instead of 1500 EGP. The offer is valid until the end of Eid Al-Adha',
                                             style: TextStyle(
-                                                fontWeight: FontWeight.bold,
                                                 fontSize: 15,
                                                 height: 1.6)),
                                       ],
@@ -275,6 +281,80 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ),
                         ),
+                        
+                      ],
+                    ),
+                     // Start
+
+                    Stack(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(top: 20),
+                          height: 200,
+                          width: 600,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(borderRadios),
+                            ),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(borderRadios),
+                              child: Image.asset(
+                                "assets/images/dummy/5.jpg",
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                        ),
+                        // content container
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(borderRadios),
+                            color: mainColor.withOpacity(0.9),
+                          ),
+                          margin: EdgeInsets.only(top: 20),
+                          height: 200,
+                          width: 600,
+                          child: Container(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 10, horizontal: 10),
+                            child: Column(
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.only(top: 10, bottom: 20),
+                                  child: RichText(
+                                    textAlign: TextAlign.center,
+                                    text: TextSpan(
+                                      children: const <TextSpan>[
+                                        TextSpan(
+                                            text: 'Eid al-Adha offer',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                color: Color(0xffffffff),
+                                                fontSize: 30)),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: RichText(
+                                    textAlign: TextAlign.center,
+                                    text: TextSpan(
+                                      children: const <TextSpan>[
+                                        TextSpan(
+                                            text:
+                                                'A special offer for Eid Al-Adha, you can register a 3-month subscription for 1200 instead of 1500 EGP. The offer is valid until the end of Eid Al-Adha',
+                                            style: TextStyle(
+                                                fontSize: 15,
+                                                height: 1.6)),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        
                       ],
                     ),
                   ],
