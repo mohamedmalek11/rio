@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:rio/components/input.dart';
 import 'package:rio/constants/colors.dart';
+import 'package:rio/pages/home.dart';
 
 class SignIn extends StatefulWidget {
   @override
@@ -78,7 +80,7 @@ class _SignInState extends State<SignIn> {
                           padding: EdgeInsets.only(bottom: 10),
                           child: TextButton(
                             onPressed: () {
-                              Navigator.of(context).pushNamed("homePage");
+                              Get.to(MyHomePage());
                             },
                             child: Text(
                               "New Member?",
