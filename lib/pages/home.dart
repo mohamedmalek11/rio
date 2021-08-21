@@ -126,8 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                             text:
                                                 'Get a month for free when you subscribe for 3 months Subscription price 1500 pounds This offer is valid until the end of the year',
                                             style: TextStyle(
-                                                fontSize: 15,
-                                                height: 1.6)),
+                                                fontSize: 15, height: 1.6)),
                                       ],
                                     ),
                                   ),
@@ -199,8 +198,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                             text:
                                                 'For a limited time, subscribe to the 6-month offer for 2500 instead of 3500 pounds, this throne is valid until the end of the year',
                                             style: TextStyle(
-                                                fontSize: 15,
-                                                height: 1.6)),
+                                                fontSize: 15, height: 1.6)),
                                       ],
                                     ),
                                   ),
@@ -271,8 +269,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                             text:
                                                 'A special offer for Eid Al-Adha, you can register a 3-month subscription for 1200 instead of 1500 EGP. The offer is valid until the end of Eid Al-Adha',
                                             style: TextStyle(
-                                                fontSize: 15,
-                                                height: 1.6)),
+                                                fontSize: 15, height: 1.6)),
                                       ],
                                     ),
                                   ),
@@ -281,10 +278,9 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ),
                         ),
-                        
                       ],
                     ),
-                     // Start
+                    // Start
 
                     Stack(
                       children: [
@@ -344,8 +340,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                             text:
                                                 'A special offer for Eid Al-Adha, you can register a 3-month subscription for 1200 instead of 1500 EGP. The offer is valid until the end of Eid Al-Adha',
                                             style: TextStyle(
-                                                fontSize: 15,
-                                                height: 1.6)),
+                                                fontSize: 15, height: 1.6)),
                                       ],
                                     ),
                                   ),
@@ -354,7 +349,6 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ),
                         ),
-                        
                       ],
                     ),
                   ],
