@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:rio/constants/colors.dart';
+import 'package:rio/pages/myAccount.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -11,6 +13,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   // change App bar color on scroll
   var appBarColor = Colors.transparent;
+
   onScroll(ScrollMetrics metrics) {
     appBarColor = Colors.black;
     setState(() {
@@ -40,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Image.asset(
           "assets/images/logo1.png",
           fit: BoxFit.contain,
-          height: 70,
+          height: 60,
         ),
         backgroundColor: appBarColor,
         elevation: 0.0,
@@ -54,7 +57,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   Icons.settings,
                   size: 30,
                 ),
-                onPressed: () {}),
+                onPressed: () {
+                  Get.to(() => MyAccountPage());
+                }),
           )
         ],
       ),
