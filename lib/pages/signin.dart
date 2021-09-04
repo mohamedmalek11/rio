@@ -33,7 +33,7 @@ class _SignInState extends State<SignIn> {
                 padding:
                     EdgeInsets.only(top: 40, right: 20, left: 20, bottom: 30),
 
-                // The Page lelments
+                // The Page Elelments
                 child: Column(
                   children: [
                     Container(
@@ -41,22 +41,22 @@ class _SignInState extends State<SignIn> {
                       child: Image.asset("assets/images/logo2.png"),
                     ),
                     Container(
-                      padding: EdgeInsets.only(top: 50),
+                      padding: EdgeInsets.only(top: 30),
                       child: Text(
                         "Sign in",
                         style: TextStyle(fontSize: 40),
                       ),
                     ),
                     Container(
-                        padding: EdgeInsets.only(top: 60),
+                        padding: EdgeInsets.only(top: 30),
                         child: inputComponent(
                             "Enter your name", "Name", 20, TextInputType.name)),
                     Container(
-                        padding: EdgeInsets.only(top: 60),
+                        padding: EdgeInsets.only(top: 30),
                         child: inputComponent("Enter your player ID",
                             "player ID", 8, TextInputType.number)),
                     Container(
-                        padding: EdgeInsets.only(top: 60),
+                        padding: EdgeInsets.only(top: 40),
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                               primary: accent1,
@@ -66,26 +66,47 @@ class _SignInState extends State<SignIn> {
                           onPressed: () {},
                           child: Padding(
                             padding: const EdgeInsets.symmetric(
-                                horizontal: 20, vertical: 14),
+                                horizontal: 25, vertical: 14),
                             child: Text(
                               "Sign In",
                               style: TextStyle(fontSize: 17),
                             ),
                           ),
                         )),
+                    Container(
+                      padding: EdgeInsets.only(top: 20),
+                      child: OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                          side: BorderSide(color: accent1, width: 1),
+                          shape: const RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(50))),
+                        ),
+                        onPressed: () {
+                          Get.to(() => MyHomePage(),
+                              transition: Transition.native);
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 14),
+                          child: Text(
+                            "New Member?",
+                            style: TextStyle(color: accent1, fontSize: 15),
+                          ),
+                        ),
+                      ),
+                    ),
                     Expanded(
-                      flex: 1,
                       child: Container(
                           alignment: Alignment.bottomCenter,
-                          padding: EdgeInsets.only(bottom: 10),
+                          padding: EdgeInsets.only(),
                           child: TextButton(
                             onPressed: () {
                               Get.to(() => MyHomePage(),
                                   transition: Transition.native);
                             },
                             child: Text(
-                              "New Member?",
-                              style: TextStyle(color: accent1, fontSize: 16),
+                              "Admin",
+                              style: TextStyle(color: Colors.white24, fontSize: 16),
                             ),
                           )),
                     ),
