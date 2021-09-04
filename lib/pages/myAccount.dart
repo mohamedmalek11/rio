@@ -41,129 +41,154 @@ class MyAccountPageState extends State<MyAccountPage> {
         Container(
           margin: EdgeInsetsDirectional.only(top: 60),
           width: MediaQuery.of(context).size.width,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              SizedBox(
-                height: 70,
-              ),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: 70,
+                ),
 
-              // person Image
-              Stack(children: [
-                Positioned(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(
-                        color: Colors.white,
-                        width: 2.0,
+                // person Image
+                Stack(children: [
+                  Positioned(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 2.0,
+                        ),
+                      ),
+                      child: CircleAvatar(
+                        backgroundColor: Colors.black,
+                        radius: 120,
+                        backgroundImage:
+                            AssetImage("assets/images/dummy/demo1.png"),
                       ),
                     ),
-                    child: CircleAvatar(
-                      backgroundColor: Colors.black,
-                      radius: 120,
-                      backgroundImage:
-                          AssetImage("assets/images/dummy/demo1.png"),
+                  ),
+                  Positioned(
+                    bottom: 0,
+                    right: 40,
+                    child: InkWell(
+                      onTap: () {},
+                      child: Image.asset(
+                        "assets/images/plus1.png",
+                        width: 40,
+                        height: 40,
+                      ),
                     ),
+                  )
+                ]),
+                SizedBox(
+                  height: 55,
+                ),
+                // person name
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  child: Text(
+                    "Mohamed Malek",
+                    style: TextStyle(fontSize: 36),
                   ),
                 ),
-                Positioned(
-                  bottom: 0,
-                  right: 40,
-                  child: InkWell(
-                    onTap: () {},
-                    child: Image.asset(
-                      "assets/images/plus1.png",
-                      width: 40,
-                      height: 40,
+
+                SizedBox(
+                  height: 40,
+                ),
+
+                // person data
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      padding: EdgeInsets.symmetric(horizontal: 10),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          RichText(
+                            text: TextSpan(
+                              text: "Player ID \n",
+                              style: TextStyle(fontSize: 16, height: 2),
+                              children: const <TextSpan>[
+                                TextSpan(
+                                    text: '9538235681',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 25,
+                                    )),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 15,),
+
+                          RichText(
+                            text: TextSpan(
+                              text: "Renew Date \n",
+                              style: TextStyle(
+                                fontSize: 16,
+                                height: 2,
+                              ),
+                              children: const <TextSpan>[
+                                TextSpan(
+                                    text: '3/9/2022',
+                                    style: TextStyle(
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.w400)),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
-                  ),
+                    Container(
+                      padding: EdgeInsets.symmetric(horizontal: 10),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          RichText(
+                            text: TextSpan(
+                              text: "Birth date \n",
+                              style: TextStyle(fontSize: 16, height: 2),
+                              children: const <TextSpan>[
+                                TextSpan(
+                                    text: '26/12/1996',
+                                    style: TextStyle(
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.w400)),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 15,),
+                          RichText(
+                            text: TextSpan(
+                              text: "Days Available \n",
+                              style: TextStyle(fontSize: 16, height: 2),
+                              children: const <TextSpan>[
+                                TextSpan(
+                                    text: '12',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 25,
+                                    )),
+                                TextSpan(
+                                    text: ' Days',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 25,
+                                    )),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 )
-              ]),
-              SizedBox(
-                height: 55,
-              ),
-
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 50),
-                child: Text(
-                  "Mohamed Malek",
-                  style: TextStyle(fontSize: 36),
-                ),
-              ),
-
-              SizedBox(
-                height: 40,
-              ),
-
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 40),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    RichText(
-                      text: TextSpan(
-                        text: "Player ID \n",
-                        style: TextStyle(fontSize: 16, height: 2),
-                        children: const <TextSpan>[
-                          TextSpan(
-                              text: '9538235681',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 25,
-                              )),
-                        ],
-                      ),
-                    ),
-                    RichText(
-                      text: TextSpan(
-                        text: "Renew Date \n",
-                        style: TextStyle(fontSize: 16, height: 2),
-                        children: const <TextSpan>[
-                          TextSpan(
-                              text: '23/9/2022',
-                              style: TextStyle(
-                                  fontSize: 25, fontWeight: FontWeight.w400)),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-
-              SizedBox(
-                height: 40,
-              ),
-
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 40),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    RichText(
-                      text: TextSpan(
-                        text: "Days Available \n",
-                        style: TextStyle(fontSize: 16, height: 2),
-                        children: const <TextSpan>[
-                          TextSpan(
-                              text: '12',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 25,
-                              )),
-                               TextSpan(
-                              text: ' Days',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 25,
-                              )),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              )
-            ],
+              ],
+            ),
           ),
         )
       ]),
