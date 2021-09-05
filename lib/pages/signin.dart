@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rio/components/input.dart';
 import 'package:rio/constants/colors.dart';
+import 'package:rio/pages/Admin.dart';
 import 'package:rio/pages/home.dart';
 
 class SignIn extends StatefulWidget {
@@ -101,7 +102,7 @@ class _SignInState extends State<SignIn> {
                           padding: EdgeInsets.only(),
                           child: TextButton(
                             onPressed: () {
-                              Get.to(() => MyHomePage(),
+                              Get.to(() => Admin(),
                                   transition: Transition.native);
                             },
                             child: Text(

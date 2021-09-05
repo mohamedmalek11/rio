@@ -20,8 +20,14 @@ class MyApp extends StatelessWidget {
           accentColor: accent1,
           primarySwatch: Colors.deepOrange,
           textTheme: TextTheme(
-              bodyText1: TextStyle(color: Colors.white),
-              bodyText2: TextStyle(color: Colors.white)),
+              bodyText1: TextStyle(
+                  color: Colors.white,
+                  decoration: TextDecoration.none,
+                  fontSize: 14),
+              bodyText2: TextStyle(
+                  color: Colors.white,
+                  decoration: TextDecoration.none,
+                  fontSize: 14)),
           inputDecorationTheme: InputDecorationTheme(
               labelStyle: TextStyle(color: Colors.white),
               border: OutlineInputBorder(),
