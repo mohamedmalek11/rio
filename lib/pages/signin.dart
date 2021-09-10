@@ -45,7 +45,7 @@ class _SignInState extends State<SignIn> {
                       padding: EdgeInsets.only(top: 30),
                       child: Text(
                         "Sign in",
-                        style: TextStyle(fontSize: 40),
+                        style: TextStyle(fontSize: 40,color: Colors.white),
                       ),
                     ),
                     Container(

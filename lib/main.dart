@@ -21,11 +21,11 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.deepOrange,
           textTheme: TextTheme(
               bodyText1: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   decoration: TextDecoration.none,
                   fontSize: 14),
               bodyText2: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   decoration: TextDecoration.none,
                   fontSize: 14)),
           inputDecorationTheme: InputDecorationTheme(
